@@ -21,25 +21,30 @@ window.addEventListener('scroll', function(){
 /* --- Exercice 3 --- */
 
 const list =  document.getElementById('ex3-animals');
-console.log(list);
 const buttonAnimals=document.getElementById("buttonAnimals");
-console.log(buttonAnimals);
 buttonAnimals.addEventListener('click', function() {
     // const firstchild = list.firstElementChild;
     list.appendChild(list.firstElementChild);
-    console.log(buttonAnimals.addEventListener);
 });
 
 
-// const btn2 = document.querySelector("#ex3 .button");
-// const list = document.querySelector("#ex3-animals");
-// btn2.addEventListener("click", () => {
-//     // const firstChild = list.firstElementChild;
-//     list.appendChild(list.firstElementChild);
-// });
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
+const buttonColor = document.querySelector('#buttonColor');
 
+const color = ["red", "blue","green"];
+let indexColors = 0;
+
+// buttonColor.addEventListener("click", changerCouleur);
+//       function changerCouleur() {
+//         textbackgroundcolor.style.color = color;
+// }
+
+
+buttonColor.addEventListener('click', function() {
+    this.style.background = color[indexColors%color.length] ;
+indexColors++;
+  });
 
 /* ------------------------------------ */
 /* --- Exercice 5 --- */
