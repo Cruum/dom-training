@@ -13,15 +13,30 @@ function addInvis(text){
 const value = document.getElementById("ex2-scroll-value");
 
 window.addEventListener('scroll', function(){
-    value.textContent = window.scrollY;
+    value.textContent = Math.round( window.scrollY );
 }) 
-// .innerHeight
 
 
 /* ------------------------------------ */
 /* --- Exercice 3 --- */
 
+const list =  document.getElementById('ex3-animals');
+console.log(list);
+const buttonAnimals=document.getElementById("buttonAnimals");
+console.log(buttonAnimals);
+buttonAnimals.addEventListener('click', function() {
+    // const firstchild = list.firstElementChild;
+    list.appendChild(list.firstElementChild);
+    console.log(buttonAnimals.addEventListener);
+});
 
+
+// const btn2 = document.querySelector("#ex3 .button");
+// const list = document.querySelector("#ex3-animals");
+// btn2.addEventListener("click", () => {
+//     // const firstChild = list.firstElementChild;
+//     list.appendChild(list.firstElementChild);
+// });
 /* ------------------------------------ */
 /* --- Exercice 4 --- */
 
