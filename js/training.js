@@ -55,53 +55,29 @@ buttons.forEach((button) => {
 /* ------------------------------------ */
 /* --- Exercice 6 --- */
 
-const LetterContining = document.querySelector("#ex6-paragraph");
-// const allLetter = LetterContining.split(" ");
-console.log(LetterContining);
 
+const htmlP = document.getElementById("ex6-paragraph");
+console.log(htmlP);
+const txt = htmlP.dataset.label;
+console.log(txt);
+let i 	= 0 ;
+function showLetters()
+{
+  let timeOut ;
+  if(i < txt.length)
+	{
+	  htmlP.innerHTML += `<span>${txt[i]}</span>` ;
+	  timeOut = setTimeout(showLetters,50)
+	  i++
+	}
+	else
+	{
+	  clearTimeout(timeOut);
+	  console.log("end")
+	}
+}
+showLetters();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// window.addEventListener("DOMContentLoaded", (event) => {
-//     animate_text();
-//   });
-//   // -------------------
-//   function animate_text() 
-//   {
-//     let delay = 100,
-//         delay_start = 0,
-//         contents,
-//         letters;
-  
-//     document.querySelectorAll(".animate-text").forEach(function (elem) {
-//       contents = elem.textContent.trim();
-//       elem.textContent = "";
-//       letters = contents.split("");
-//       elem.style.visibility = 'visible';
-  
-//       letters.forEach(function (letter, index_1) {
-//         setTimeout(function () {
-//           // ---------
-//           // effet machine à écrire (SIMPLE)
-//           elem.textContent += letter;
-
-//         }, delay_start + delay * index_1);
-//       });    
-//       delay_start += delay * letters.length;
-//     });
-//   }
 
 /* ------------------------------------ */
 /* --- Exercice 7 --- */
@@ -115,6 +91,7 @@ const taskList = [
     "🌳 Tondre la pelouse"
 ];
 
-
+const todoli = document.createElement("li")
+todoli.classList.add("task-list-task")
 /* ------------------------------------ */
 /* --- Exercice 8 --- */
